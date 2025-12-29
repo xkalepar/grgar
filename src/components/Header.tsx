@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { href: "#hero", label: "الرئيسية" },
   { href: "#about", label: "من نحن" },
-  { href: "#partners", label: "شركاؤنا" },
+  // { href: "#partners", label: "شركاؤنا" },
   { href: "#gallery", label: "معرض الصور" },
   { href: "#services", label: "خدماتنا" },
   { href: "#why-us", label: "لماذا نحن؟" },
@@ -53,7 +53,9 @@ const Header = () => {
             className="flex items-center gap-3"
           >
             <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">غ</span>
+              <span className="text-primary-foreground font-bold text-xl">
+                غ
+              </span>
             </div>
             <span
               className={`font-bold text-lg transition-colors duration-300 ${

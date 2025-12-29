@@ -33,9 +33,6 @@ const ContactSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-secondary font-semibold text-sm mb-4 bg-secondary/10 px-4 py-2 rounded-full">
-            نحن هنا لمساعدتك
-          </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             تواصل معنا
           </h2>
@@ -71,19 +68,15 @@ const ContactSection = () => {
                 </div>
                 <div className="text-primary-foreground">
                   <span className="font-bold block">فريق الدعم الفني</span>
-                  <span className="text-sm text-primary-foreground/80">جاهزون لخدمتكم</span>
+                  <span className="text-sm text-primary-foreground/80">
+                    جاهزون لخدمتكم
+                  </span>
                 </div>
               </div>
             </motion.div>
 
             {/* Branches */}
             <div>
-              <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-primary" />
-                </div>
-                فروعنا
-              </h3>
               <div className="grid gap-4">
                 {branches.map((branch, index) => (
                   <motion.div
@@ -102,7 +95,9 @@ const ContactSection = () => {
                           <h4 className="font-bold text-foreground text-lg">
                             {branch.city}
                           </h4>
-                          <p className="text-muted-foreground">{branch.country}</p>
+                          <p className="text-muted-foreground">
+                            {branch.country}
+                          </p>
                         </div>
                       </div>
                       <a
@@ -130,7 +125,9 @@ const ContactSection = () => {
                   <MapPin className="w-5 h-5 text-primary" />
                   <h4 className="font-bold text-foreground">المقرّات</h4>
                 </div>
-                <p className="text-muted-foreground text-sm">بنغازي – سبها – الجالو</p>
+                <p className="text-muted-foreground text-sm">
+                  بنغازي – سبها – الجالو
+                </p>
               </motion.div>
 
               <motion.div
@@ -143,7 +140,10 @@ const ContactSection = () => {
                   <FileText className="w-5 h-5 text-primary" />
                   <h4 className="font-bold text-foreground">السجل التجاري</h4>
                 </div>
-                <p className="text-muted-foreground text-sm font-mono" dir="ltr">
+                <p
+                  className="text-muted-foreground text-sm font-mono"
+                  dir="ltr"
+                >
                   23-07-0130
                 </p>
               </motion.div>
@@ -168,7 +168,7 @@ const ContactSection = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="موقع غرغار للاستثمار الزراعي"
               />
-              
+
               {/* Map Overlay Card */}
               <div className="absolute bottom-6 right-6 left-6 bg-card/95 backdrop-blur-sm rounded-xl p-4 shadow-large border border-border">
                 <div className="flex items-center gap-3">
@@ -176,8 +176,12 @@ const ContactSection = () => {
                     <MapPin className="w-5 h-5 text-primary-foreground" />
                   </div>
                   <div>
-                    <span className="font-bold text-foreground block">غرغار للاستثمار الزراعي</span>
-                    <span className="text-muted-foreground text-sm">الموزع الرائد للحلول الزراعية</span>
+                    <span className="font-bold text-foreground block">
+                      غرغار للاستثمار الزراعي
+                    </span>
+                    <span className="text-muted-foreground text-sm">
+                      الموزع الرائد للحلول الزراعية
+                    </span>
                   </div>
                 </div>
               </div>

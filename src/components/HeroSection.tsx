@@ -40,7 +40,7 @@ const HeroSection = () => {
       className="relative min-h-[100vh] lg:min-h-screen flex items-center overflow-hidden"
     >
       {/* Background Layer with Parallax */}
-      <motion.div 
+      <motion.div
         style={{ y: backgroundY }}
         className="absolute inset-0 w-full h-[120%] -top-[10%]"
       >
@@ -50,7 +50,7 @@ const HeroSection = () => {
           className="w-full h-full object-cover animate-zoom-in"
         />
         {/* Multi-layer Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-l from-primary/95 via-primary/85 to-secondary/75" />
+        <div className="absolute inset-0 bg-gradient-to-l from-primary/70 via-primary/60 to-secondary/50" />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
         <div className="absolute inset-0 diagonal-lines" />
         <div className="absolute inset-0 grain-overlay" />
@@ -79,166 +79,97 @@ const HeroSection = () => {
       </div>
 
       {/* Main Content */}
-      <motion.div 
+      <motion.div
         style={{ y: textY, opacity }}
         className="relative z-10 section-container w-full py-32 lg:py-0"
       >
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          {/* Text Content - Right Side */}
-          <div className="order-2 lg:order-1 text-center lg:text-right">
-            {/* Animated Badges */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-8"
-            >
-              {badges.map((badge, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.4 + index * 0.1, duration: 0.5 }}
-                  className="flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-full px-4 py-2"
-                >
-                  <badge.icon className="w-4 h-4 text-accent" />
-                  <span className="text-primary-foreground/90 text-sm font-medium">
-                    {badge.text}
-                  </span>
-                </motion.div>
-              ))}
-            </motion.div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
+          <div className="text-right space-y-8 order-2 md:order-1">
+            <div>
+              <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-6">
+                نزرع <span className="">الثقة</span>...
+                <br />
+                ونحصد <span className="">النجاح</span>
+              </h1>
 
-            {/* Main Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-primary-foreground leading-[1.1] mb-6 text-shadow-hero"
-            >
-              <span className="block">نزرع الثقة…</span>
-              <span className="block text-accent mt-2">ونحصد النجاح</span>
-            </motion.h1>
+              <p className="text-xl text-gray-200 leading-relaxed max-w-xl">
+                من قلب الأرض الليبية، نوفر حلولاً زراعية متكاملة تمكّن المزارعين
+                من النمو، الاستدامة، والازدهار.
+              </p>
+            </div>
 
-            {/* Subheading */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
-              className="text-lg md:text-xl lg:text-2xl text-primary-foreground/85 max-w-2xl mx-auto lg:mx-0 lg:mr-0 mb-10 leading-relaxed"
-            >
-              من قلب الأرض الليبية، نوفر أحدث الحلول الزراعية التي تمكّن المزارعين
-              من النمو، الاستدامة، والازدهار
-            </motion.p>
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.8 }}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
-            >
-              <Button
-                variant="hero"
-                size="lg"
-                onClick={() => scrollToSection("#services")}
-                className="min-w-[200px] group"
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                //
+                href="/#services"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold transition-all duration-300 active:scale-95 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 h-14 text-lg"
               >
                 استكشف حلولنا
-                <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
-              </Button>
-              <Button
-                variant="heroOutline"
-                size="lg"
-                onClick={() => scrollToSection("#contact")}
-                className="min-w-[200px]"
-              >
-                <Headphones className="w-5 h-5" />
-                تواصل مع فريقنا
-              </Button>
-            </motion.div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-5 h-5 rtl:rotate-180"
+                >
+                  <path d="M7 7h10v10" />
+                  <path d="M7 17 17 7" />
+                </svg>
+              </a>
 
-            {/* Stats Bar */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.1, duration: 0.8 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-8 mt-12 pt-8 border-t border-primary-foreground/20"
-            >
-              <div className="text-center lg:text-right">
-                <span className="block text-3xl md:text-4xl font-black text-accent">+١٥</span>
-                <span className="text-primary-foreground/70 text-sm">سنوات خبرة</span>
-              </div>
-              <div className="text-center lg:text-right">
-                <span className="block text-3xl md:text-4xl font-black text-accent">+١٠٠٠</span>
-                <span className="text-primary-foreground/70 text-sm">مزارع نفخر بخدمتهم</span>
-              </div>
-              <div className="text-center lg:text-right">
-                <span className="block text-3xl md:text-4xl font-black text-accent">٣</span>
-                <span className="text-primary-foreground/70 text-sm">فروع في ليبيا</span>
-              </div>
-            </motion.div>
+              <a
+                href="/#contact"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold transition-all duration-300 active:scale-95 border-2 h-14 text-lg border-white text-white hover:bg-white hover:text-primary"
+              >
+                تواصل مع فريقنا
+              </a>
+            </div>
           </div>
 
-          {/* Image Collage - Left Side */}
-          <div className="order-1 lg:order-2 relative">
-            <div className="relative w-full max-w-lg mx-auto lg:mx-0">
-              {/* Main Large Image */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9, x: 50 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ delay: 0.6, duration: 0.9 }}
-                className="relative z-20 rounded-3xl overflow-hidden shadow-xl border-4 border-primary-foreground/10"
-              >
-                <img
-                  src={heroFarmer}
-                  alt="مزارع ليبي في الحقول"
-                  className="w-full h-[350px] md:h-[400px] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent" />
-              </motion.div>
-
-              {/* Floating Image 1 */}
-              <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9, duration: 0.8 }}
-                className="absolute -bottom-8 -right-4 lg:-right-12 z-30 w-40 md:w-48 rounded-2xl overflow-hidden shadow-large border-4 border-card animate-float-slow"
-              >
-                <img
-                  src={tractorAction}
-                  alt="جرار في العمل"
-                  className="w-full h-28 md:h-32 object-cover"
-                />
-              </motion.div>
-
-              {/* Floating Image 2 */}
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 1.1, duration: 0.8 }}
-                className="absolute -top-6 -left-4 lg:-left-12 z-10 w-32 md:w-40 rounded-2xl overflow-hidden shadow-large border-4 border-card animate-float animation-delay-500"
-              >
-                <img
-                  src={detailMachinery}
-                  alt="تفاصيل المعدات"
-                  className="w-full h-32 md:h-40 object-cover"
-                />
-              </motion.div>
-
-              {/* Decorative Elements */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.3, duration: 0.8 }}
-                className="absolute -bottom-4 -left-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl"
+          {/* Images */}
+          <div className="relative h-[400px] md:h-[600px] hidden md:block order-1 md:order-2">
+            <div className="absolute top-10 left-10 w-3/4 h-3/4 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 z-10">
+              <img
+                src={heroFarmer}
+                alt="CLAAS Tractor"
+                className="w-full h-full object-cover"
               />
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.4, duration: 0.8 }}
-                className="absolute top-1/2 -right-8 w-16 h-16 bg-golden/30 rounded-full blur-xl"
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <p className="text-white font-bold text-lg">أحدث معدات CLAAS</p>
+              </div>
+            </div>
+
+            <div className="absolute bottom-10 right-10 w-1/2 h-1/2 rounded-3xl overflow-hidden shadow-2xl border-4 border-primary z-20">
+              <img
+                src={tractorAction}
+                alt="Irrigation System"
+                className="w-full h-full object-cover"
               />
+            </div>
+
+            <div className="absolute top-0 right-0 p-8 animate-pulse text-primary opacity-30">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={120}
+                height={120}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 20h10" />
+                <path d="M10 20c5.5-2.5.8-6.4 3-10" />
+                <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z" />
+                <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z" />
+              </svg>
             </div>
           </div>
         </div>
