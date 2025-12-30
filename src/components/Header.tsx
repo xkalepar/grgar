@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import LogoSvg from "./ui/logo";
 
 const navLinks = [
   { href: "#hero", label: "الرئيسية" },
@@ -52,18 +53,9 @@ const Header = () => {
             }}
             className="flex items-center gap-3"
           >
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">
-                غ
-              </span>
+            <div className=" w-64  flex items-center justify-center">
+              <LogoSvg className="w-full h-auto" />
             </div>
-            <span
-              className={`font-bold text-lg transition-colors duration-300 ${
-                isScrolled ? "text-foreground" : "text-primary-foreground"
-              }`}
-            >
-              غرغار للاستثمار الزراعي
-            </span>
           </a>
 
           {/* Desktop Navigation */}

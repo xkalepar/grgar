@@ -151,7 +151,7 @@ const WhyUsSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
-              className="group p-6 rounded-2xl bg-primary-foreground/10 border border-primary-foreground/10 hover:bg-primary-foreground/10 hover:border-accent/30 transition-all duration-500 hover:-translate-y-1"
+              className="group glass-dark p-6 rounded-2xl bg-primary-foreground/10 border border-primary-foreground/10 hover:bg-primary-foreground/10 hover:border-accent/30 transition-all duration-500 hover:-translate-y-1"
             >
               <div className="w-14 h-14 rounded-xl bg-accent/40 flex items-center justify-center mb-4 group-hover:bg-accent/30 group-hover:shadow-glow-accent transition-all duration-500">
                 <reason.icon className="w-7 h-7 text-accent" />

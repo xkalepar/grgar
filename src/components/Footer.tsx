@@ -26,7 +26,7 @@ const Footer = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         onClick={scrollToTop}
-        className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg hover:bg-secondary transition-colors z-10"
+        className="absolute top-1 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg hover:bg-secondary transition-colors z-10"
         aria-label="العودة للأعلى"
       >
         <ArrowUp className="w-5 h-5 text-primary-foreground" />
@@ -38,11 +38,17 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-2xl">غ</span>
+                <span className="text-primary-foreground font-bold text-2xl">
+                  غ
+                </span>
               </div>
               <div>
-                <span className="font-bold text-xl block">غرغار للاستثمار الزراعي</span>
-                <span className="text-background/60 text-sm">GHARGROW AGRO-INDUSTRIES</span>
+                <span className="font-bold text-xl block">
+                  غرغار للاستثمار الزراعي
+                </span>
+                <span className="text-background/60 text-sm">
+                  GHARGROW AGRO-INDUSTRIES
+                </span>
               </div>
             </div>
             <p className="text-background/70 leading-relaxed max-w-md mb-8">
@@ -50,7 +56,7 @@ const Footer = () => {
               الزراعية المتكاملة في ليبيا. نعمل على دعم مستقبل الزراعة وتمكين
               المزارعين من تحقيق أفضل إنتاجية.
             </p>
-            
+
             {/* Social Media */}
             <div className="flex items-center gap-4">
               <span className="text-background/60 text-sm">تابعنا:</span>

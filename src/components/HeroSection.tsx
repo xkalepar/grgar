@@ -1,19 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, Headphones, Award, MapPin } from "lucide-react";
+import { Headphones, Award, MapPin } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 // Images
 import heroFarmer from "@/assets/hero-farmer.jpg";
 import heroIrrigation from "@/assets/hero-irrigation-water.jpg";
-import detailMachinery from "@/assets/detail-machinery.jpg";
 import tractorAction from "@/assets/tractor-action.jpg";
-
-const badges = [
-  { icon: Award, text: "موزّع معتمد" },
-  { icon: Headphones, text: "دعم فني مستمر" },
-  { icon: MapPin, text: "خبرة وطنية" },
-];
 
 const HeroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);

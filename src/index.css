@@ -37,7 +37,7 @@
     --input: 100 20% 86%;
     --ring: 100 65% 20%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     /* Custom Agricultural Palette */
     --earth: 30 40% 22%;
@@ -47,19 +47,35 @@
     --cream: 45 50% 96%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(100 65% 20% / 0.92), hsl(100 50% 25% / 0.85));
-    --gradient-hero-dark: linear-gradient(180deg, hsl(100 65% 12% / 0.95), hsl(100 50% 18% / 0.90));
-    --gradient-section: linear-gradient(180deg, hsl(90 20% 98%), hsl(100 25% 94%));
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(100 65% 20% / 0.92),
+      hsl(100 50% 25% / 0.85)
+    );
+    --gradient-hero-dark: linear-gradient(
+      180deg,
+      hsl(100 65% 12% / 0.95),
+      hsl(100 50% 18% / 0.9)
+    );
+    --gradient-section: linear-gradient(
+      180deg,
+      hsl(90 20% 98%),
+      hsl(100 25% 94%)
+    );
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(100 25% 97%));
-    --gradient-golden: linear-gradient(135deg, hsl(42 90% 52%), hsl(35 85% 55%));
+    --gradient-golden: linear-gradient(
+      135deg,
+      hsl(42 90% 52%),
+      hsl(35 85% 55%)
+    );
 
     /* Shadows */
     --shadow-sm: 0 2px 8px hsl(100 65% 20% / 0.06);
-    --shadow-md: 0 4px 20px hsl(100 65% 20% / 0.10);
+    --shadow-md: 0 4px 20px hsl(100 65% 20% / 0.1);
     --shadow-lg: 0 8px 40px hsl(100 65% 20% / 0.14);
     --shadow-xl: 0 16px 60px hsl(100 65% 20% / 0.18);
-    --shadow-glow: 0 0 40px hsl(100 65% 20% / 0.30);
-    --shadow-glow-accent: 0 0 30px hsl(85 55% 50% / 0.40);
+    --shadow-glow: 0 0 40px hsl(100 65% 20% / 0.3);
+    --shadow-glow-accent: 0 0 30px hsl(85 55% 50% / 0.4);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -110,6 +126,9 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
+::selection {
+  @apply bg-foreground text-white;
+}
 
 @layer base {
   * {
@@ -124,7 +143,12 @@
     @apply bg-background text-foreground font-cairo antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-cairo font-bold;
   }
 }
@@ -197,14 +221,30 @@
 }
 
 @layer utilities {
-  .animation-delay-100 { animation-delay: 100ms; }
-  .animation-delay-200 { animation-delay: 200ms; }
-  .animation-delay-300 { animation-delay: 300ms; }
-  .animation-delay-400 { animation-delay: 400ms; }
-  .animation-delay-500 { animation-delay: 500ms; }
-  .animation-delay-600 { animation-delay: 600ms; }
-  .animation-delay-700 { animation-delay: 700ms; }
-  .animation-delay-800 { animation-delay: 800ms; }
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
 
   .text-shadow-hero {
     text-shadow: 0 4px 20px hsl(var(--foreground) / 0.3);
